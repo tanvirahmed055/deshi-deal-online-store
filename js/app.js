@@ -1,6 +1,6 @@
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
-  fetch(url)
+  // const url = `https://fakestoreapi.com/products`;
+  fetch('http://127.0.0.1:5500/db.json')
     .then((response) => response.json())
     .then((data) => showProducts(data));
 };
