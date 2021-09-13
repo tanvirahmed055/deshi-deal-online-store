@@ -11,18 +11,23 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const image = product.images;
     const div = document.createElement("div");
-    div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
-      <div>
-    <img class="product-image" src=${product.image}></img>
-      </div>
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h5>Average Rating: ${product.rating.rate} &#11088 | Total Ratings ${product.rating.count} </h5>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
-      `;
+    div.classList.add = "col";
+
+    div.innerHTML = `<div class="single-product card h-100 shadow rounded p-3">
+    <img src=${product.image} class="card-img-top product-image" alt="...">
+    <div class="card-body">
+      <h6 class="card-title fw-bolder">${product.title.slice(0, 50)}</h6>
+      <p class="card-text fw-bold">Category: ${product.category}</p>
+      <p>Average Rating: ${product.rating.rate} &#11088 <span class="text-primary">(${product.rating.count} ratings)</span> </p>
+      <h5>Price: $ ${product.price}</h5>
+                   
+    </div>
+    <div class="d-grid gap-2 d-md-block">
+         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+         <button id="details-btn" class="btn btn-danger">Details</button>
+      </div> 
+  </div>`
+
     document.getElementById("all-products").appendChild(div);
   }
 };

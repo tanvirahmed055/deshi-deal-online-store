@@ -11,11 +11,12 @@ body {
   width: 100%;
   margin: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
 }
 .single-product {
-  padding: 10px;
+  padding: 5px;
   transition: 0.6s;
+  margin: 5px;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
@@ -25,7 +26,14 @@ body {
 .product-image {
   width: 150px;
   height: 150px;
+  margin: auto;
+} 
+
+.card-body{
+  height: 250px;
 }
+
+
 .cart {
   width: 350px;
   /* border: 1px solid green; */
