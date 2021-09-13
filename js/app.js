@@ -19,9 +19,9 @@ const showProducts = (products) => {
     </div>
     <div class="card-body">
       <h6 class="card-title fw-bolder">${product.title.slice(0, 50)}</h6>
-      <p class="card-text fw-bold">Category: ${product.category}</p>
-      <p>Average Rating: ${product.rating.rate} &#11088 <span class="text-primary">(${product.rating.count} ratings)</span> </p>
-      <h5>Price: $ ${product.price}</h5>
+      <p class="card-text text-dark "><small>Category: ${product.category} </small></p>
+      <p class="card-text text-dark">Average Rating: <span class="fw-bolder">${product.rating.rate}</span> &#11088 <span class="text-primary fw-bold">(${product.rating.count} </span>ratings) </p>
+      <h5 class="fw-bold">Price: $ ${product.price}</h5>
                    
     </div>
     <div class="d-grid gap-2 d-md-block">
