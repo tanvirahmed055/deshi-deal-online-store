@@ -14,7 +14,9 @@ const showProducts = (products) => {
     div.classList.add = "col";
 
     div.innerHTML = `<div class="single-product card h-100 shadow rounded p-3">
+    <div>
     <img src=${product.image} class="card-img-top product-image" alt="...">
+    </div>
     <div class="card-body">
       <h6 class="card-title fw-bolder">${product.title.slice(0, 50)}</h6>
       <p class="card-text fw-bold">Category: ${product.category}</p>
@@ -23,8 +25,8 @@ const showProducts = (products) => {
                    
     </div>
     <div class="d-grid gap-2 d-md-block">
-         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-         <button id="details-btn" class="btn btn-danger">Details</button>
+         <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-warning  text-dark fw-bold">Add to cart</button>
+         <button id="details-btn" class="btn btn-info  fw-bolder">Details</button>
       </div> 
   </div>`
 
